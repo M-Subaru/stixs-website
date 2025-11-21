@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Full Menu – Stixs Asian Kitchen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <style>
+    .menu-section{max-width:1200px;margin:7rem auto 3rem;padding:0 2rem;}
+    .center{text-align:center;margin-bottom:3rem;}
+	h1.center{margin:0 auto 3rem;text-align:center;}
+    .menu-category{margin-bottom:4rem;}
+    .menu-category h2{font-size:2rem;margin-bottom:1.5rem;color:var(--stixs-red);border-left:5px solid var(--gold);padding-left:1rem;}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;}
+    .item{background:var(--white);border-radius:12px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.08);display:flex;flex-direction:column;}
+    .item img{width:100%;height:180px;object-fit:cover;}
+    .kimchi-zoom img{object-position:40% 50%;}
+	.info{padding:1.2rem;flex:1;display:flex;flex-direction:column;}
+    .info h3{font-size:1.25rem;margin-bottom:.4rem;}
+    .desc{font-size:.9rem;color:#555;margin-bottom:.8rem;}
+    .price{margin-top:auto;font-weight:700;font-size:1.1rem;color:var(--stixs-red);}
+    .pdf-btn{text-align:center;margin-top:3rem;}
+  </style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">STIXS</a>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="menu-full.html" class="active">Full Menu</a></li>
+      <li><a href="allergy.html">Allergy Info</a></li>
+      <li><a href="index.html#location">Location</a></li>
+      <li><a href="index.html#order">Order</a></li>
+    </ul>
+    <button class="mobile-menu-toggle"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+
+<section class="menu-section">
+<div class="center">
+  <h1>Our Complete Menu</h1>
+  <p>All dishes prepared fresh daily | For allergen information please contact the restaurant directly.</p>
+</div>
+
+<!--  KOREAN FRIED CHICKEN  地道韓式炸雞  -->
+<div class="menu-category">
+  <h2>Korean Fried Chicken 地道韓式炸雞</h2>
+  <div class="grid">
+    <!--  WINGS  -->
+    <div class="item">
+      <img src="assets/img/5piece-kfcw.jpg" alt="Chicken wings 5 pcs">
+      <div class="info">
+        <h3>Chicken wings 5 pieces</h3>
+        <p class="desc">Crispy fried wings with Korean glaze choice.</p>
+        <span class="price">£7.80</span>
+      </div>
+    </div>
+    <div class="item">
+      <img src="assets/img/7piece-kfcw.jpg" alt="Chicken wings 7 pcs">
+      <div class="info">
+        <h3>Chicken wings 7 pieces</h3>
+        <p class="desc">Larger portion – same great glaze choice.</p>
+        <span class="price">£9.50</span>
+      </div>
+    </div>
+    <div class="item">
+      <img src="assets/img/16piece-kfcw.jpg" alt="Chicken wings 16 pcs">
+      <div class="info">
+        <h3>Chicken wings 16 pieces</h3>
+        <p class="desc">Party size wings.</p>
+        <span class="price">£20.80</span>
+      </div>
+    </div>
+
+    <!--  PIECES  -->
+    <div class="item">
+      <img src="assets/img/3piece-kfcp.jpg" alt="Chicken pieces 3">
+      <div class="info">
+        <h3>Chicken pieces 3</h3>
+        <p class="desc">Boneless bites – Popular.</p>
+        <span class="price">£8.50</span>
+      </div>
+    </div>
+    <div class="item">
+      <img src="assets/img/5piece-kfcp.jpg" alt="Chicken pieces 5">
+      <div class="info">
+        <h3>Chicken pieces 5</h3>
+        <p class="desc">Boneless bites – bigger portion.</p>
+        <span class="price">£12.00</span>
+      </div>
+    </div>
+    <div class="item">
+      <img src="assets/img/10piece-kfcp.jpg" alt="Chicken pieces 10">
+      <div class="info">
+        <h3>Chicken pieces 10</h3>
+        <p class="desc">Party size boneless bites.</p>
+        <span class="price">£23.00</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- BAO BUNS & DUMPLINGS 刈包(2 件） -->
+  <div class="menu-category">
+    <h2>Bao Buns & Dumplings (2 Pieces) 刈包(2 件）</h2>
+    <div class="grid">
+      <div class="item"><img src="assets/img/traditional-taiwanese-bao-buns.jpg" alt="Traditional Taiwanese Bao Buns"><div class="info"><h3>Traditional Taiwanese Bao Buns</h3><p class="desc">Slow-cooked belly pork, pickled mustard, crushed peanuts.</p><span class="price">£9.50</span></div></div>
+      <div class="item"><img src="assets/img/katsu-chicken-bao-buns.jpg" alt="Katsu Chicken Bao Buns"><div class="info"><h3>Katsu Chicken Bao Buns</h3><p class="desc">Panko katsu, sriracha mayo, lettuce.</p><span class="price">£9.50</span></div></div>
+      <div class="item"><img src="assets/img/korean-fried-chicken-bao-buns.jpg" alt="Korean Fried Chicken Bao Buns"><div class="info"><h3>Korean Fried Chicken Bao Buns</h3><p class="desc">Sweet & spicy Korean hot sauce, lettuce.</p><span class="price">£10.00</span></div></div>
+      <div class="item"><img src="assets/img/kimchi-pulled-pork-bao-buns.jpg" alt="Kimchi & Pulled Pork Bao Buns"><div class="info"><h3>Kimchi & Pulled Pork Bao Buns</h3><p class="desc">House kimchi, pulled pork, gochujang mayo.</p><span class="price">£10.00</span></div></div>
+      <div class="item"><img src="assets/img/teriyaki-chicken-bao-bun.jpg" alt="Teriyaki Chicken Bao Bun"><div class="info"><h3>Teriyaki Chicken Bao Bun</h3><p class="desc">Grilled teriyaki chicken, lettuce, sesame.</p><span class="price">£10.50</span></div></div>
+      <div class="item"><img src="assets/img/pan-fried-kimchi-pork-dumplings.jpg" alt="Pan Fried Kimchi Pork Dumplings"><div class="info"><h3>Pan Fried Kimchi Pork Dumplings (6)</h3><p class="desc">Crispy bottom, spicy kimchi & pork filling.</p><span class="price">£8.50</span></div></div>
+    </div>
+  </div>
+
+  <!-- SMALL PLATE 前菜 -->
+  <div class="menu-category">
+    <h2>Small Plate 前菜</h2>
+    <div class="grid">
+      <div class="item"><img src="assets/img/tteokbokki.jpg" alt="Tteokbokki"><div class="info"><h3>Tteokbokki</h3><p class="desc">Spicy stir-fried rice cake with cabbage & fish cake.</p><span class="price">£8.00</span></div></div>
+      <div class="item"><img src="assets/img/takoyaki-plate.jpg" alt="Takoyaki"><div class="info"><h3>Takoyaki</h3><p class="desc">Octopus balls with aonori, tafuku sauce & mayo.</p><span class="price">£7.80</span></div></div>
+      <div class="item"><img src="assets/img/prawn-toast.jpg" alt="Prawn Toast"><div class="info"><h3>Prawn Toast with Salted Duck Egg</h3><p class="desc">Golden prawn toast tossed in salted egg crumble.</p><span class="price">£9.50</span></div></div>
+      <div class="item"><img src="assets/img/korean-com-cheese.jpg" alt="Korean Com Cheese"><div class="info"><h3>Korean Com Cheese</h3><p class="desc">Mozzarella on sweetcorn, gochujang, spring onion.</p><span class="price">£8.50</span></div></div>
+      <div class="item"><img src="assets/img/chicken-cheese-spring-roll.jpg" alt="Chicken & Cheese Spring Roll"><div class="info"><h3>Chicken & Cheese Spring Roll (3)</h3><p class="desc">Crispy rolls filled with chicken & mozzarella.</p><span class="price">£7.50</span></div></div>
+      <div class="item"><img src="assets/img/deep-fried-chicken-wings-salted-duck-egg.jpg" alt="Deep Fried Chicken Wings Salted Duck Egg"><div class="info"><h3>Deep Fried Chicken Wings (7) 金沙咸蛋雞翅膀</h3><p class="desc">Wings tossed with salted duck egg yolk crumble.</p><span class="price">£12.00</span></div></div>
+    </div>
+  </div>
+
+  <!-- TAIWANESE NOODLE / RICE 台式麵飯 -->
+  <div class="menu-category">
+    <h2>Taiwanese Noodle / Rice 台式麵飯</h2>
+    <div class="grid">
+      <div class="item"><img src="assets/img/braised-mixed-spice-pork-belly-rice.jpg" alt="Braised Mixed Spice Pork Belly Rice"><div class="info"><h3>Braised Mixed Spice Pork Belly Rice 台灣滷肉飯</h3><p class="desc">Lu-rou: slow-braised pork belly on rice with pickled radish.</p><span class="price">£11.80</span></div></div>
+      <div class="item"><img src="assets/img/taiwanese-beef-broth.jpg" alt="Taiwanese Beef Noodle Soup"><div class="info"><h3>Taiwanese Beef Noodle Soup 台灣牛肉麵</h3><p class="desc">Tender beef, handmade noodles, bok choy, pickled mustard in rich broth.</p><span class="price">£14.00</span></div></div>
+    </div>
+  </div>
+
+<!--  KOREAN RICE / NOODLES & MEAT  韓式炒飯,拌飯, 肉類  -->
+<div class="menu-category">
+  <h2>Korean Rice / Noodles & Meat 韓式炒飯,拌飯, 肉類</h2>
+  <div class="grid">
+    <div class="item">
+      <img src="assets/img/galbi-kimchi-rice-bowl.jpg" alt="Galbi with Kimchi Rice Bowl">
+      <div class="info">
+        <h3>Galbi with Kimchi Rice Bowl 韓式烤牛小排泡菜飯</h3>
+        <p class="desc">Grilled beef short ribs on kimchi fried rice, sesame, spring onion.</p>
+        <span class="price">£14.00</span>
+      </div>
+    </div>
+
+    <!--  zoomed-out kimchi fried rice  -->
+    <div class="item kimchi-zoom">
+      <img src="assets/img/kimchi-fried-rice.jpg" alt="Kimchi Fried Rice">
+      <div class="info">
+        <h3>Kimchi Fried Rice with Fried Egg 韓式泡菜炒飯</h3>
+        <p class="desc">Spicy kimchi rice topped with sunny-side-up egg.</p>
+        <span class="price">£10.80</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="assets/img/kimchi-jjigae.jpg" alt="Kimchi Jjigae">
+      <div class="info">
+        <h3>Kimchi Jjigae 韓式辣泡菜燉五花腩</h3>
+        <p class="desc">Kimchi stew with belly pork & tofu, served with rice.</p>
+        <span class="price">£13.50</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="assets/img/japchae.jpg" alt="Japchae">
+      <div class="info">
+        <h3>Japchae 韓式蔬菜拌冬粉</h3>
+        <p class="desc">Glass noodles stir-fried with mixed vegetables & sesame.</p>
+        <span class="price">£10.90</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="assets/img/kimchi-fried-rice-bacon.jpg" alt="Kimchi Fried Rice with Bacon">
+      <div class="info">
+        <h3>Kimchi Fried Rice with Bacon & Fried Egg 韓式泡菜豬肉炒飯</h3>
+        <p class="desc">House kimchi, bacon lardons, fried egg.</p>
+        <span class="price">£11.80</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="assets/img/ojingeo-bokkeum.jpg" alt="Ojingeo-bokkeum">
+      <div class="info">
+        <h3>24 Ojingeo-bokkeum 辣炒魷魚</h3>
+        <p class="desc">Korean spicy stir-fried squid with vegetables.</p>
+        <span class="price">£15.00</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- VIETNAMESE BEEF PHO 越南牛肉湯河粉 -->
+  <div class="menu-category">
+    <h2>Vietnamese Beef Pho 越南牛肉湯河粉</h2>
+    <div class="grid">
+      <div class="item"><img src="assets/img/vietnamese-beef-broth.jpg" alt="Vietnamese Beef Pho"><div class="info"><h3>Slow Cooked Beef Shin Pho</h3><p class="desc">Flat rice noodles, slow-cooked beef shin, herbs, beansprout, lime, chilli, fish sauce.</p><span class="price">£14.50</span></div></div>
+      <div class="item"><img src="assets/img/vietnamese-beef-broth.jpg" alt="Vietnamese Beef Pho Raw Beef"><div class="info"><h3>Raw Sliced Beef Pho</h3><p class="desc">Rare beef slices poached in hot broth at table, herbs, lime.</p><span class="price">£13.00</span></div></div>
+    </div>
+  </div>
+  
+  <!--  RAMEN 拉麵  -->
+<div class="menu-category">
+  <h2>Ramen 拉麵</h2>
+  <div class="grid">
+    <div class="item">
+      <img src="assets/img/tonkotsu-ramen-broth.jpg" alt="Tonkotsu Ramen Broth">
+      <div class="info">
+        <h3>Tonkotsu Ramen Broth (日式豬骨湯拉麵)</h3>
+        <p class="desc">BBQ pork belly on top of ramen in a rich 18-hour pork broth topped with ajitsuke tamago, kikurage, mushrooms, spring onions, sesame and nori seaweed. (18小時秘製豬骨湯配日式叉燒,溏心蛋,木耳,香菇,香蔥, 芝麻,紫菜).</p>
+        <span class="price">£12.50</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="assets/img/shoyu-soy-broth.jpg" alt="Shoyu Soy Ramen Broth">
+      <div class="info">
+        <h3>Shoyu Soy Ramen Broth (日式醬油拉麵)</h3>
+        <p class="desc">Chicken karaage on top of ramen in chicken broth topped with ajitsuke tamago, kikurage, mushrooms, spring onions, sesame and nori seaweed. (香濃雞湯配唐揚炸雞,溏心蛋,木耳,香菇,香蔥,芝麻,紫菜).</p>
+        <span class="price">£12.50</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="assets/img/volcano-tonkotsu-ramen-broth.jpg" alt="Volcano Tonkotsu Ramen Broth">
+      <div class="info">
+        <h3>Volcano Tonkotsu Ramen Broth (火焰日式豬骨湯拉麵)</h3>
+        <p class="desc">BBQ pork belly on top of ramen in super-spicy pork broth topped with ajitsuke tamago, kikurage, mushrooms, spring onions, sesame and nori seaweed. (秘製火焰豬骨湯配日式叉燒,溏心蛋,木耳,香菇,香蔥,芝麻,紫菜).</p>
+        <span class="price">£13.00</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="assets/img/miso-soybean-broth-salmon.jpg" alt="Miso Soybean Ramen Broth with Salmon">
+      <div class="info">
+        <h3>Miso Soybean Ramen Broth with Marinated Grilled Miso Salmon (日式味噌拉麵配烤味噌三文魚扒)</h3>
+        <p class="desc">Miso marinated salmon on top of ramen in chicken broth topped with ajitsuke tamago, kikurage, mushrooms, spring onions, sesame and nori seaweed. (香濃雞湯配味噌三文魚扒,溏心蛋,木耳,香菇,香蔥,芝麻,紫菜).</p>
+        <span class="price">£15.50</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="assets/img/vegan-miso-ramen.jpg" alt="Vegan Miso Ramen">
+      <div class="info">
+        <h3>Vegan Miso Ramen Topped with Bean Curd (蔬菜味噌拉麵配豆腐)</h3>
+        <p class="desc">Bean curd topped with kikurage, mushrooms, spring onions, sesame and nori seaweed. (豆腐,木耳,香菇,香蔥,芝麻,紫菜).</p>
+        <span class="price">£12.50</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="assets/img/shoyu-vegetable-dumplings.jpg" alt="Shoyu Ramen with Vegetable Dumplings">
+      <div class="info">
+        <h3>Shoyu Ramen Topped with Vegetable Dumplings (醬油拉麵配蔬菜餃子)</h3>
+        <p class="desc">Vegetable dumplings, topped with kikurage, mushrooms, spring onions, sesame and nori seaweed. (蔬菜餃子,木耳,香菇,香蔥,芝麻,紫菜).</p>
+        <span class="price">£12.50</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- DONBURI 日式丼飯 -->
+  <div class="menu-category">
+    <h2>Donburi (Japanese Rice Bowl) 日式丼飯</h2>
+    <div class="grid">
+      <div class="item"><img src="assets/img/gyudon.jpg" alt="Gyudon"><div class="info"><h3>Gyudon Sliced Beef Rice Bowl</h3><p class="desc">Thinly sliced beef & onion simmered in dashi-soy sauce on rice.</p><span class="price">£11.80</span></div></div>
+      <div class="item"><img src="assets/img/katsu-chicken-curry.jpg" alt="Katsu Chicken Curry"><div class="info"><h3>Katsu Chicken Curry</h3><p class="desc">Deep-fried panko chicken, Japanese curry sauce, rice, pickles.</p><span class="price">£11.80</span></div></div>
+      <div class="item"><img src="assets/img/katsudon.jpg" alt="Katsudon"><div class="info"><h3>Katsudon with Katsu Chicken</h3><p class="desc">Panko chicken, onions & egg simmered in sweet-savoury sauce on rice.</p><span class="price">£12.50</span></div></div>
+      <div class="item"><img src="assets/img/teriyaki-chicken-rice-bowl.jpg" alt="Teriyaki Chicken Rice Bowl"><div class="info"><h3>Teriyaki Chicken Rice Bowl</h3><p class="desc">Grilled teriyaki chicken thigh, steamed rice, sesame, spring onion.</p><span class="price">£11.80</span></div></div>
+      <div class="item"><img src="assets/img/slow-braised-belly-pork.jpg" alt="Slow-braised Belly Pork"><div class="info"><h3>Slow-braised Belly Pork 日式叉燒飯</h3><p class="desc">House chashu slices, rice, pickles, spring onion.</p><span class="price">£11.80</span></div></div>
+      <div class="item"><img src="assets/img/katsudon-with-tonkotsu.jpg" alt="Katsudon Tonkotsu"><div class="info"><h3>Katsudon with Tonkotsu (Pork)</h3><p class="desc">Panko pork cutlet, onions & egg simmered in sweet-savoury sauce on rice.</p><span class="price">£12.50</span></div></div>
+      <div class="item"><img src="assets/img/tonkatsu.jpg" alt="Tonkatsu"><div class="info"><h3>Tonkatsu 日式吉列豬扒飯</h3><p class="desc">Panko pork loin, cabbage slaw, tonkatsu fruit sauce, rice.</p><span class="price">£11.80</span></div></div>
+      <div class="item"><img src="assets/img/katsu-pork-loin.jpg" alt="Katsu Pork Loin Curry"><div class="info"><h3>Katsu Pork Loin Curry 日式咖喱吉列豬扒飯</h3><p class="desc">Deep-fried panko pork, Japanese curry sauce, rice.</p><span class="price">£12.50</span></div></div>
+    </div>
+  </div>
+
+  <!-- SIDES 小菜 -->
+  <div class="menu-category">
+    <h2>Sides 小菜</h2>
+    <div class="grid">
+      <div class="item"><img src="assets/img/shichimi-spiced-fries.jpg" alt="Shichimi Spiced Fries"><div class="info"><h3>Shichimi Spiced Fries</h3><p class="desc">Crispy fries tossed with Japanese seven-spice.</p><span class="price">£5.00</span></div></div>
+      <div class="item"><img src="assets/img/french-fries.jpg" alt="French Fries"><div class="info"><h3>French Fries</h3><p class="desc">Classic crispy fries.</p><span class="price">£4.50</span></div></div>
+      <div class="item"><img src="assets/img/sushi-rice.jpg" alt="Sushi Rice"><div class="info"><h3>Sushi Rice</h3><p class="desc">Seasoned short-grain rice.</p><span class="price">£3.90</span></div></div>
+      <div class="item"><img src="assets/img/edamame.jpg" alt="Edamame"><div class="info"><h3>Edamame</h3><p class="desc">Steamed green soybeans with sea salt.</p><span class="price">£5.90</span></div></div>
+      <div class="item"><img src="assets/img/shichimi-spiced-edamame.jpg" alt="Shichimi Spiced Edamame"><div class="info"><h3>Shichimi Spiced Edamame</h3><p class="desc">Steamed edamame tossed with seven-spice.</p><span class="price">£6.50</span></div></div>
+    </div>
+  </div>
+
+  <!-- COLD SIDE DISH 冷盤 -->
+  <div class="menu-category">
+    <h2>Cold Side Dish 冷盤</h2>
+    <div class="grid">
+      <div class="item"><img src="assets/img/pickled-cucumber.jpg" alt="Pickled Cucumber"><div class="info"><h3>Pickled Cucumber 酸辣黄瓜</h3><p class="desc">Sliced cucumber in spicy garlic tangy sauce.</p><span class="price">£4.50</span></div></div>
+      <div class="item"><img src="assets/img/sweet-white-radish.jpg" alt="Sweet White Radish"><div class="info"><h3>Sweet White Radish 酸甜醃蘿蔔</h3><p class="desc">Daikon pickles, sweet & sour.</p><span class="price">£4.50</span></div></div>
+      <div class="item"><img src="assets/img/kimchi-cabbage.jpg" alt="Kimchi"><div class="info"><h3>Kimchi (cabbage) 韓國泡菜</h3><p class="desc">Fermented napa cabbage & chilli.</p><span class="price">£4.50</span></div></div>
+      <div class="item"><img src="assets/img/bean-sprout-sesame-oil.jpg" alt="Bean Sprout Sesame Oil"><div class="info"><h3>Bean sprout with sesame oil 韓式麻油涼拌芽菜</h3><p class="desc">Blanched bean sprouts, sesame oil, spring onion.</p><span class="price">£4.50</span></div></div>
+    </div>
+  </div>
+  
+  <!-- NON-ALCOHOL 無酒精飲料 -->
+  <div class="menu-category">
+    <h2>Non-Alcohol 無酒精飲料</h2>
+    <div class="grid">
+      <div class="item"><img src="assets/img/korean-milkis.jpg" alt="Korean Milkis"><div class="info"><h3>Korean Milkis</h3><p class="desc">Korean carbonated milk drink.</p><span class="price">£4.20</span></div></div>
+      <div class="item"><img src="assets/img/korean-sparkling-watermelon.jpg" alt="Sparkling Watermelon"><div class="info"><h3>Korean Sparkling Watermelon</h3><p class="desc">Watermelon flavoured sparkling drink.</p><span class="price">£3.50</span></div></div>
+      <div class="item"><img src="assets/img/korean-sparkling-mango.jpg" alt="Sparkling Mango"><div class="info"><h3>Korean Sparkling Mango</h3><p class="desc">Mango flavoured sparkling drink.</p><span class="price">£3.50</span></div></div>
+      <div class="item"><img src="assets/img/coca-cola-bottle.jpg" alt="Coca Cola"><div class="info"><h3>Coca Cola bottle</h3><p class="desc">Glass bottle.</p><span class="price">£3.30</span></div></div>
+      <div class="item"><img src="assets/img/diet-coke-bottle.jpg" alt="Diet Coke"><div class="info"><h3>Diet Coke bottle</h3><p class="desc">Glass bottle.</p><span class="price">£3.30</span></div></div>
+      <div class="item"><img src="assets/img/still-mineral-water.jpg" alt="Still Mineral Water"><div class="info"><h3>Still Mineral Water</h3><p class="desc">Still water.</p><span class="price">£1.95</span></div></div>
+      <div class="item"><img src="assets/img/aloe-vera-original.jpg" alt="Aloe Vera Original"><div class="info"><h3>Aloe Vera original</h3><p class="desc">Korean aloe drink with pulp.</p><span class="price">£4.20</span></div></div>
+      <div class="item"><img src="assets/img/rice-milk.jpg" alt="Rice Milk"><div class="info"><h3>Rice milk</h3><p class="desc">Korean rice milk drink.</p><span class="price">£4.20</span></div></div>
+      <div class="item"><img src="assets/img/korean-plum-drinks.jpg" alt="Korean Plum Drinks"><div class="info"><h3>Korean plum drinks</h3><p class="desc">Sweet plum tea drink.</p><span class="price">£4.20</span></div></div>
+    </div>
+  </div>
+
+  <div class="pdf-btn">
+    <a href="assets/menu-stixs.pdf" download class="btn btn-primary">Download Printable PDF</a>
+  </div>
+</section>
+
+<script src="https://kit.fontawesome.com/6a6a7e8e7a.js" crossorigin="anonymous"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

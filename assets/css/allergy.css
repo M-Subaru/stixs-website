@@ -1,0 +1,32 @@
+.allergy-section{
+  max-width:900px;
+  margin:7rem auto 3rem;
+  padding:0 2rem;
+}
+.disclaimer{
+  background:#ffe5e5;
+  border-left:5px solid var(--stixs-red);
+  padding:1.2rem;
+  margin-bottom:3rem;
+  font-size:1.05rem;
+}
+.allergen-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(100px,1fr));
+  gap:1.5rem;
+  margin-bottom:3rem;
+}
+.icon{
+  text-align:center;
+}
+.icon img{
+  width:48px;
+  height:48px;
+  margin-bottom:.5rem;
+}
+.icon span{
+  display:block;
+  font-size:.8rem;
+  color:var(--dark);
+}
+.extra h3{margin-top:2rem;font-size:1.3rem;color:var(--stixs-red);}
