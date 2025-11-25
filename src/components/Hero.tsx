@@ -34,8 +34,8 @@ export const Hero = () => {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Korean fried chicken, volcano ramen, katsudon & more.
-            <span className="block mt-2 text-primary font-semibold">Fresh. Bold. Unforgettable.</span>
+            Experience the best of Korean, Japanese and Taiwanese cuisine
+            <span className="block mt-2 text-primary font-semibold">in the heart of Newcastle</span>
           </p>
 
           {/* CTA Buttons */}
@@ -87,7 +87,7 @@ export const Hero = () => {
           {/* Location Badge */}
           <div className="pt-8">
             <p className="text-sm text-muted-foreground">
-              📍 <span className="text-foreground font-semibold">St Andrew's Street, Newcastle upon Tyne</span>
+              📍 <span className="text-foreground font-semibold">117 Newgate Street, Newcastle upon Tyne</span>
             </p>
           </div>
         </div>

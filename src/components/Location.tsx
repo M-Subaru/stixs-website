@@ -3,8 +3,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Phone, Clock, Navigation } from "lucide-react";
 
 export const Location = () => {
-  const address = "St Andrew's Street, Newcastle upon Tyne, NE1 5SE";
+  const address = "117 Newgate Street, Newcastle upon Tyne, NE1 5RZ";
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+  const reservationUrl = "https://autoreserve.com/en/restaurants/pRaBmwCtq3suDu8UN3kQ";
 
   return (
     <section id="location" className="py-20 md:py-32 bg-card relative overflow-hidden">
@@ -24,9 +25,9 @@ export const Location = () => {
               Find Us
             </span>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              <span className="text-foreground">Visit or </span>
+              <span className="text-foreground">Find </span>
               <span className="bg-gradient-to-r from-primary via-primary-light to-accent bg-clip-text text-transparent">
-                Order Online
+                Us
               </span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground">
@@ -46,9 +47,9 @@ export const Location = () => {
                   <div>
                     <h3 className="font-display font-bold text-lg text-foreground mb-2">Address</h3>
                     <p className="text-muted-foreground">
-                      St Andrew's Street<br />
+                      117 Newgate Street<br />
                       Newcastle upon Tyne<br />
-                      NE1 5SE
+                      NE1 5RZ
                     </p>
                   </div>
                 </div>
@@ -60,9 +61,9 @@ export const Location = () => {
                   <div>
                     <h3 className="font-display font-bold text-lg text-foreground mb-2">Opening Hours</h3>
                     <div className="text-muted-foreground space-y-1">
-                      <p>Mon-Thu: 5:00 PM - 10:30 PM</p>
-                      <p>Fri-Sat: 5:00 PM - 11:00 PM</p>
-                      <p>Sunday: 5:00 PM - 10:00 PM</p>
+                      <p><strong>Monday:</strong> Closed</p>
+                      <p><strong>Tue-Sun:</strong> 11:00 AM - 9:00 PM</p>
+                      <p className="text-sm pt-1">Last orders: 8:30 PM</p>
                     </div>
                   </div>
                 </div>
@@ -73,15 +74,21 @@ export const Location = () => {
                   </div>
                   <div>
                     <h3 className="font-display font-bold text-lg text-foreground mb-2">Contact</h3>
-                    <p className="text-muted-foreground">
-                      Order via Uber Eats or Deliveroo<br />
-                      <a href="https://autoreserve.com/en/restaurants/pRaBmwCtq3suDu8UN3kQ" 
-                         target="_blank" 
-                         rel="noopener noreferrer"
-                         className="text-primary hover:underline">
-                        Make a Reservation →
-                      </a>
-                    </p>
+                    <div className="text-muted-foreground space-y-2">
+                      <p>
+                        <a href="tel:+447860363158" className="text-primary hover:underline font-semibold">
+                          +44 7860 363158
+                        </a>
+                      </p>
+                      <p>
+                        <a href="mailto:Stixs828@gmail.com" className="text-primary hover:underline">
+                          Stixs828@gmail.com
+                        </a>
+                      </p>
+                      <p className="text-sm pt-1">
+                        Collection available - call to order!
+                      </p>
+                    </div>
                   </div>
                 </div>
 
@@ -97,20 +104,56 @@ export const Location = () => {
               </CardContent>
             </Card>
 
-            {/* Order Online */}
+            {/* Map Image */}
+            <Card className="bg-background border-border overflow-hidden animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <div className="relative h-[400px] md:h-full">
+                <img 
+                  src="/images/stixs-map.jpg" 
+                  alt="Map to Stixs Asian Kitchen"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <Button 
+                    className="w-full bg-primary hover:bg-primary-light text-primary-foreground shadow-glow"
+                    asChild
+                  >
+                    <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer">
+                      <Navigation className="mr-2 w-5 h-5" />
+                      Open in Google Maps
+                    </a>
+                  </Button>
+                </div>
+              </div>
+            </Card>
+
+            {/* Reservations & Orders */}
             <Card className="bg-background border-border hover:border-accent/50 transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               <CardContent className="p-8 space-y-6 flex flex-col h-full">
                 <div className="space-y-4 flex-grow">
                   <h3 className="font-display font-bold text-2xl text-foreground">
-                    Order <span className="text-accent">Delivery</span>
+                    Reserve <span className="text-accent">&</span> Order
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Get authentic Asian flavours delivered straight to your door. 
-                    Order now through our delivery partners for quick and convenient service.
+                    Book your table, order collection by phone, or get delivery straight to your door.
                   </p>
                 </div>
 
                 <div className="space-y-3">
+                  <Button 
+                    className="w-full bg-accent hover:bg-accent/90 text-accent-foreground shadow-medium hover:shadow-glow transition-all text-lg"
+                    size="lg"
+                    asChild
+                  >
+                    <a 
+                      href={reservationUrl}
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      Make a Reservation
+                    </a>
+                  </Button>
+
                   <Button 
                     className="w-full bg-primary hover:bg-primary-light text-primary-foreground shadow-soft hover:shadow-medium transition-all"
                     size="lg"
@@ -121,12 +164,12 @@ export const Location = () => {
                       target="_blank" 
                       rel="noopener noreferrer"
                     >
-                      Order on Uber Eats
+                      Delivery - Uber Eats
                     </a>
                   </Button>
 
                   <Button 
-                    className="w-full border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground shadow-soft hover:shadow-medium transition-all"
+                    className="w-full border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground shadow-soft hover:shadow-medium transition-all"
                     size="lg"
                     variant="outline"
                     asChild
@@ -136,7 +179,7 @@ export const Location = () => {
                       target="_blank" 
                       rel="noopener noreferrer"
                     >
-                      Order on Deliveroo
+                      Delivery - Deliveroo
                     </a>
                   </Button>
                 </div>
