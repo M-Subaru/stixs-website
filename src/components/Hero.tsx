@@ -1,120 +1,107 @@
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
-import heroImage from "@/assets/hero-poke-bowl.jpg";
+import { ArrowRight, UtensilsCrossed } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
-    <section className="relative h-screen overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0">
-        <img 
-          src={heroImage} 
-          alt="Fresh Poke Bowl" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/85 to-background/90" />
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-card">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(var(--primary)) 1px, transparent 0)',
+          backgroundSize: '40px 40px'
+        }} />
       </div>
-      
-      {/* Animated Decorative Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          className="absolute top-20 right-20 w-72 h-72 bg-primary/30 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.2, 0.4, 0.2],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-20 left-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-      </div>
-      
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 h-full flex flex-col items-center justify-center text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <motion.h1 
-            className="font-display text-6xl md:text-8xl font-bold text-foreground mb-6"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Oki Poke
-          </motion.h1>
-          
-          <motion.p 
-            className="text-2xl md:text-3xl text-foreground mb-4 font-light"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            Fresh Hawaiian Poke & Premium Sushi
-          </motion.p>
-          
-          <motion.p 
-            className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            Authentic Asian fusion bowls made fresh daily with premium ingredients
-          </motion.p>
-          
-          <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            <Button 
-              size="lg"
-              className="bg-primary hover:bg-primary-light text-primary-foreground font-bold text-lg px-10 py-6 rounded-full shadow-glow transition-bounce hover:scale-105"
-              asChild
-            >
-              <a href="/menu">View Full Menu & Order</a>
-            </Button>
-            <Button 
-              size="lg"
-              variant="secondary"
-              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-bold text-lg px-10 py-6 rounded-full transition-bounce hover:scale-105"
-              asChild
-            >
-              <a href="#order">Order Online</a>
-            </Button>
-          </motion.div>
-        </motion.div>
-        
-        {/* Scroll Indicator */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <div className="w-6 h-10 border-2 border-muted-foreground rounded-full flex items-start justify-center p-2">
-            <motion.div 
-              className="w-1.5 h-1.5 bg-primary rounded-full"
-              animate={{ y: [0, 16, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            />
+
+      {/* Decorative Elements */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
+          {/* Icon */}
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 border-2 border-primary/20 mb-4">
+            <UtensilsCrossed className="w-10 h-10 text-primary" />
           </div>
-        </motion.div>
+
+          {/* Main Heading */}
+          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
+            <span className="block text-foreground mb-2">Authentic</span>
+            <span className="block bg-gradient-to-r from-primary via-primary-light to-accent bg-clip-text text-transparent">
+              Asian Flavours
+            </span>
+          </h1>
+
+          {/* Subtitle */}
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Korean fried chicken, volcano ramen, katsudon & more.
+            <span className="block mt-2 text-primary font-semibold">Fresh. Bold. Unforgettable.</span>
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary-light text-primary-foreground shadow-medium hover:shadow-glow transition-all text-lg px-8 py-6 group"
+              asChild
+            >
+              <a 
+                href="https://www.ubereats.com/gb/store/stixs-asian-kitchen/S0ln4TDsXO62L7A0dAVCJA" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                Order on Uber Eats
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </Button>
+            
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground shadow-soft hover:shadow-medium transition-all text-lg px-8 py-6 group"
+              asChild
+            >
+              <a 
+                href="https://deliveroo.co.uk/menu/newcastle/newcastle-city-centre/stixs-asian-kitchen" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                Order on Deliveroo
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </Button>
+          </div>
+
+          {/* Secondary Actions */}
+          <div className="flex flex-wrap gap-6 justify-center pt-4 text-sm text-muted-foreground">
+            <Link to="/menu" className="hover:text-primary transition-colors flex items-center gap-2">
+              <span>View Full Menu</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link to="/allergies" className="hover:text-accent transition-colors flex items-center gap-2">
+              <span>Allergy Information</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          {/* Location Badge */}
+          <div className="pt-8">
+            <p className="text-sm text-muted-foreground">
+              📍 <span className="text-foreground font-semibold">St Andrew's Street, Newcastle upon Tyne</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Wave */}
+      <div className="absolute bottom-0 left-0 right-0">
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
+          <path 
+            d="M0 0L60 10C120 20 240 40 360 45C480 50 600 40 720 35C840 30 960 30 1080 35C1200 40 1320 50 1380 55L1440 60V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V0Z" 
+            fill="hsl(var(--card))"
+            fillOpacity="0.3"
+          />
+        </svg>
       </div>
     </section>
   );

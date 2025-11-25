@@ -1,97 +1,98 @@
-import { motion } from "framer-motion";
-import { Utensils, Award, Heart, Clock } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { Flame, Heart, Award, Users } from "lucide-react";
 
 const features = [
   {
-    icon: Utensils,
-    title: "Fresh Daily",
-    description: "All ingredients sourced fresh and prepared daily for maximum quality",
-  },
-  {
-    icon: Award,
-    title: "4.8★ Rated",
-    description: "Highly rated with 900+ reviews across delivery platforms",
+    icon: Flame,
+    title: "Authentic Flavours",
+    description: "Traditional Korean, Japanese, and Asian fusion recipes crafted with passion"
   },
   {
     icon: Heart,
-    title: "Healthy Choice",
-    description: "Nutritious bowls packed with protein, vitamins, and fresh vegetables",
+    title: "Fresh Ingredients",
+    description: "Only the finest, freshest ingredients sourced daily for maximum quality"
   },
   {
-    icon: Clock,
-    title: "Quick Service",
-    description: "Fast preparation without compromising on quality or taste",
+    icon: Award,
+    title: "Award Winning",
+    description: "Recognized by locals and critics alike for exceptional Asian cuisine"
   },
+  {
+    icon: Users,
+    title: "Community Loved",
+    description: "Proud to serve Newcastle with bold, unforgettable Asian dishes"
+  }
 ];
 
 export const About = () => {
   return (
-    <section id="about" className="py-24 bg-card">
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Where Hawaiian <span className="text-gradient-primary">Tradition</span> Meets Asian Excellence
-            </h2>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              At Oki Poke, we bring the authentic flavors of Hawaiian poke bowls and premium Japanese sushi to the heart of Newcastle. Each bowl is carefully crafted with the freshest fish and ingredients, creating a perfect harmony of taste and nutrition.
-            </p>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              From our signature California Bowl to our Grand Slam Sashimi, every dish celebrates the art of Asian fusion cuisine. Whether you're looking for a quick healthy lunch or a satisfying dinner, we've got you covered.
-            </p>
-            
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 mb-8">
-              <div className="text-center">
-                <div className="text-4xl font-display font-bold text-primary mb-1">900+</div>
-                <div className="text-sm text-muted-foreground">Reviews</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-display font-bold text-primary mb-1">4.8★</div>
-                <div className="text-sm text-muted-foreground">Rating</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-display font-bold text-primary mb-1">50+</div>
-                <div className="text-sm text-muted-foreground">Menu Items</div>
-              </div>
-            </div>
-          </motion.div>
+    <section id="about" className="py-20 md:py-32 bg-background relative overflow-hidden">
+      {/* Decorative Elements */}
+      <div className="absolute top-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
 
-          {/* Right Features Grid */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="grid sm:grid-cols-2 gap-6"
-          >
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-card/50 p-6 rounded-2xl border border-border hover:border-primary/30 transition-smooth hover:shadow-soft"
-              >
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-display text-xl font-bold text-foreground mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {feature.description}
-                </p>
-              </motion.div>
-            ))}
-          </motion.div>
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left: Content */}
+          <div className="space-y-6 animate-fade-in-up">
+            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold">
+              About Us
+            </span>
+            
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              <span className="text-foreground">Bringing Authentic</span>
+              <span className="block bg-gradient-to-r from-primary via-primary-light to-accent bg-clip-text text-transparent mt-2">
+                Asian Cuisine
+              </span>
+              <span className="block text-foreground mt-2">to Newcastle</span>
+            </h2>
+
+            <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+              <p>
+                At <span className="text-primary font-semibold">Stixs Asian Kitchen</span>, we're passionate about delivering 
+                the bold, authentic flavours of Asia right to your doorstep. From crispy Korean fried chicken 
+                to hearty volcano ramen, every dish is crafted with care and tradition.
+              </p>
+              
+              <p>
+                Located in the heart of Newcastle on <span className="text-foreground font-semibold">St Andrew's Street</span>, 
+                we pride ourselves on using fresh, quality ingredients and authentic cooking techniques 
+                to create meals that transport you straight to the streets of Seoul, Tokyo, and beyond.
+              </p>
+
+              <p className="text-primary font-semibold">
+                Order now on Uber Eats or Deliveroo and taste the difference!
+              </p>
+            </div>
+          </div>
+
+          {/* Right: Features Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {features.map((feature, index) => {
+              const Icon = feature.icon;
+              return (
+                <Card 
+                  key={index}
+                  className="p-6 bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-soft animate-fade-in-up group"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 border-2 border-primary/20 group-hover:border-primary transition-colors">
+                      <Icon className="w-7 h-7 text-primary" />
+                    </div>
+                    
+                    <h3 className="font-display font-bold text-xl text-foreground group-hover:text-primary transition-colors">
+                      {feature.title}
+                    </h3>
+                    
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                </Card>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

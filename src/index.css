@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Oki Poke Design System - Ocean Fresh Aesthetic */
+/* Stixs Asian Kitchen Design System - Bold Red & Gold */
 
 @layer base {
   :root {
@@ -12,19 +12,19 @@
     --background: 0 0% 7%;              /* Near black */
     --foreground: 0 0% 98%;             /* White text */
     
-    /* Oki Poke Green - Primary Brand Color */
-    --primary: 152 85% 58%;             /* #3aeb8b green */
-    --primary-foreground: 0 0% 0%;      /* Black text on green */
-    --primary-light: 152 75% 70%;       /* Lighter green */
+    /* Stixs Red - Primary Brand Color */
+    --primary: 0 75% 42%;               /* #B91C1C red */
+    --primary-foreground: 0 0% 100%;    /* White text on red */
+    --primary-light: 0 75% 55%;         /* Lighter red */
     
-    /* Secondary Green Accent */
-    --accent: 152 85% 58%;              /* Matches primary green */
-    --accent-foreground: 0 0% 0%;
-    --accent-glow: 152 85% 70%;
+    /* Gold Accent */
+    --accent: 45 100% 50%;              /* #FFD700 gold */
+    --accent-foreground: 0 0% 0%;       /* Black text on gold */
+    --accent-glow: 45 100% 65%;
     
-    /* Success Green */
-    --success: 152 85% 58%;
-    --success-foreground: 0 0% 0%;
+    /* Success - Keep green for status */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
     
     /* Card & Surface - Dark gray */
     --card: 0 0% 12%;
@@ -50,14 +50,15 @@
     --destructive-foreground: 0 0% 100%;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(152, 85%, 58%), hsl(152, 75%, 70%));
+    --gradient-primary: linear-gradient(135deg, hsl(0, 75%, 42%), hsl(0, 75%, 55%));
+    --gradient-accent: linear-gradient(135deg, hsl(45, 100%, 50%), hsl(45, 100%, 65%));
     --gradient-dark: linear-gradient(135deg, hsl(0, 0%, 7%), hsl(0, 0%, 15%));
-    --gradient-hero: linear-gradient(135deg, hsl(0, 0%, 5%), hsl(0, 0%, 12%));
+    --gradient-hero: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(185, 28, 28, 0.2));
     
     /* Shadows */
-    --shadow-soft: 0 4px 20px hsla(152, 85%, 58%, 0.15);
-    --shadow-medium: 0 8px 30px hsla(152, 85%, 58%, 0.25);
-    --shadow-glow: 0 0 40px hsla(152, 85%, 58%, 0.3);
+    --shadow-soft: 0 4px 20px hsla(0, 75%, 42%, 0.2);
+    --shadow-medium: 0 8px 30px hsla(0, 75%, 42%, 0.3);
+    --shadow-glow: 0 0 40px hsla(45, 100%, 50%, 0.25);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -70,10 +71,10 @@
     --background: 0 0% 7%;
     --foreground: 0 0% 98%;
     
-    --primary: 152 85% 58%;
-    --primary-foreground: 0 0% 0%;
+    --primary: 0 75% 42%;
+    --primary-foreground: 0 0% 100%;
     
-    --accent: 152 85% 58%;
+    --accent: 45 100% 50%;
     --accent-foreground: 0 0% 0%;
     
     --card: 0 0% 12%;
@@ -87,7 +88,7 @@
     
     --border: 0 0% 25%;
     --input: 0 0% 25%;
-    --ring: 152 85% 58%;
+    --ring: 0 75% 42%;
     
     --popover: 0 0% 12%;
     --popover-foreground: 0 0% 98%;
