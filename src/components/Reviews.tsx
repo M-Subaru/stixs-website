@@ -8,7 +8,7 @@ const reviews = [
     name: "Local Guide",
     rating: 5,
     text: "This Korean-Japanese restaurant is such a great deal! The portions are huge, the flavors are delicious, and you definitely leave feeling full and satisfied. Totally worth a visit if you're hungry and love tasty food!",
-    subtitle: "119 reviews, 719 photos",
+    subtitle: "119 reviews",
     images: [
       "/images/reviews/localguide-review-image1.jpg",
       "/images/reviews/localguide-review-image2.jpg",
@@ -20,7 +20,7 @@ const reviews = [
     name: "Cerys.G",
     rating: 5,
     text: "ABSOLUTELY AMAZING ASIAN FOOD! My friend and I had the Tteokbokki (no cheese), 3 Piece Fried chicken, Kimchi, Teriyaki Chicken Donburi, and Slow Braised Pork Donburi. The portions are big and well worth the price.",
-    subtitle: "12 reviews, 2 photos",
+    subtitle: "12 reviews",
     images: ["/images/reviews/carys-review-image.jpg"]
   },
   {
@@ -28,7 +28,7 @@ const reviews = [
     name: "Alejandra",
     rating: 5,
     text: "Really nice restaurant. The portions are large and very tasty. Their kimchi is delicious and the staff is very friendly. Highly recommend!",
-    subtitle: "3 reviews, 6 photos",
+    subtitle: "3 reviews",
     images: [
       "/images/reviews/alejandra-review-image1.jpg",
       "/images/reviews/alejandra-review-image2.jpg"
@@ -99,11 +99,11 @@ export const Reviews = () => {
 
                 {/* Review Images */}
                 {review.images.length > 0 && (
-                  <div className={`grid gap-2 ${review.images.length === 1 ? 'justify-center' : 'grid-cols-2'}`}>
+                  <div className={`grid gap-2 ${review.images.length === 1 ? 'flex justify-center' : 'grid-cols-2'}`}>
                     {review.images.map((image, idx) => (
                       <div 
                         key={idx} 
-                        className={`relative aspect-square rounded-lg overflow-hidden ${review.images.length === 1 ? 'w-1/2' : ''}`}
+                        className={`relative aspect-square rounded-lg overflow-hidden ${review.images.length === 1 ? 'w-2/3' : ''}`}
                       >
                         <img 
                           src={image} 
