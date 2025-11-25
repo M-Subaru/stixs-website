@@ -69,7 +69,7 @@ export const About = () => {
           <div className="relative animate-fade-in-up">
             <div className="relative overflow-hidden rounded-2xl shadow-glow">
               <img 
-                src="/images/stixs-interior.jpg" 
+                src={`${import.meta.env.BASE_URL}images/stixs-interior.jpg`}
                 alt="Stixs Asian Kitchen Interior" 
                 className="w-full h-full object-cover"
               />

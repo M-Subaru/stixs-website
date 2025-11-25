@@ -11,7 +11,7 @@ const featuredDishes = [
     price: "£12.00",
     icon: ChefHat,
     highlight: "Customer Favourite",
-    image: "/images/menu/korean-fried-chicken-5piece.jpg"
+    image: `${import.meta.env.BASE_URL}images/menu/korean-fried-chicken-5piece.jpg`
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const featuredDishes = [
     price: "£13.00",
     icon: Flame,
     highlight: "Spicy Special",
-    image: "/images/menu/volcano-tonkotsu-ramen-broth.jpg"
+    image: `${import.meta.env.BASE_URL}images/menu/volcano-tonkotsu-ramen-broth.jpg`
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const featuredDishes = [
     price: "£12.50",
     icon: Sparkles,
     highlight: "Classic Comfort",
-    image: "/images/menu/katsudon-with-tonkotsu.jpg"
+    image: `${import.meta.env.BASE_URL}images/menu/katsudon-with-tonkotsu.jpg`
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const featuredDishes = [
     price: "£10.80",
     icon: Flame,
     highlight: "Bold & Tangy",
-    image: "/images/menu/kimchi-fried-rice.jpg"
+    image: `${import.meta.env.BASE_URL}images/menu/kimchi-fried-rice.jpg`
   }
 ];
 

@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export const Hero = () => {
+  const navigate = useNavigate();
   const reservationUrl = "https://autoreserve.com/en/restaurants/pRaBmwCtq3suDu8UN3kQ";
 
   return (
@@ -9,7 +11,7 @@ export const Hero = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/images/stixs-hero.jpg" 
+          src={`${import.meta.env.BASE_URL}images/stixs-hero.jpg`}
           alt="Stixs Asian Kitchen Newcastle storefront"
           className="w-full h-full object-cover"
         />
@@ -71,7 +73,7 @@ export const Hero = () => {
                 if (menuSection) {
                   menuSection.scrollIntoView({ behavior: 'smooth' });
                 } else {
-                  window.location.href = '/menu';
+                  navigate('/menu');
                 }
               }}
             >
