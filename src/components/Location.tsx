@@ -96,7 +96,7 @@ export const Location = () => {
                   className="w-full bg-primary hover:bg-primary-light text-primary-foreground shadow-medium hover:shadow-glow transition-all"
                   asChild
                 >
-                  <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.google.com/maps/place/Stixs/@54.9732116,-1.6183628,20.34z/data=!4m6!3m5!1s0x487e71368ed66d79:0xc3ab42175f476a00!8m2!3d54.9732586!4d-1.618627!16s%2Fg%2F11svmm9xft?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
                     <Navigation className="mr-2 w-5 h-5" />
                     Get Directions
                   </a>

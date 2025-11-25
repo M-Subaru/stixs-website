@@ -87,7 +87,7 @@ export const Reviews = () => {
                 </div>
 
                 {/* Review Text */}
-                <p className="text-muted-foreground leading-relaxed italic min-h-[120px]">
+                <p className="text-muted-foreground leading-relaxed italic min-h-[140px]">
                   "{review.text}"
                 </p>
 
@@ -99,9 +99,12 @@ export const Reviews = () => {
 
                 {/* Review Images */}
                 {review.images.length > 0 && (
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className={`grid gap-2 ${review.images.length === 1 ? 'justify-center' : 'grid-cols-2'}`}>
                     {review.images.map((image, idx) => (
-                      <div key={idx} className="relative aspect-square rounded-lg overflow-hidden">
+                      <div 
+                        key={idx} 
+                        className={`relative aspect-square rounded-lg overflow-hidden ${review.images.length === 1 ? 'w-1/2' : ''}`}
+                      >
                         <img 
                           src={image} 
                           alt={`Review by ${review.name}`}
