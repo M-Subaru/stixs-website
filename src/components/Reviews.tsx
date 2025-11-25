@@ -99,7 +99,7 @@ export const Reviews = () => {
 
                 {/* Review Images */}
                 {review.images.length > 0 && (
-                  <div className={`grid gap-2 ${review.images.length === 1 ? 'flex justify-center' : 'grid-cols-2'}`}>
+                  <div className={review.images.length === 1 ? 'flex justify-center' : 'grid grid-cols-2 gap-2'}>
                     {review.images.map((image, idx) => (
                       <div 
                         key={idx} 
