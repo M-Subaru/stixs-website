@@ -1,117 +1,134 @@
-import { motion } from "framer-motion";
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Flame, Sparkles, ChefHat } from "lucide-react";
 import { Link } from "react-router-dom";
-import californiaPokeBowl from "@/assets/california-poke-bowl.jpg";
-import okiBowl from "@/assets/oki-bowl.jpg";
-import grandSlamBowl from "@/assets/grand-slam-poke-bowl.jpg";
 
-const featuredItems = [
+const featuredDishes = [
   {
     id: 1,
-    name: "California Poke Bowl",
-    description: "Salmon, cucumber, tamago, sesame, avocado, masago, wakame & nori",
-    price: "£12.00",
-    image: californiaPokeBowl,
-    rating: 4.9,
-    reviews: 172,
+    name: "Korean Fried Chicken",
+    description: "Crispy, golden chicken with your choice of sauce: Sweet Chili, Soy Garlic, or Spicy Yangnyeom",
+    price: "£9.95",
+    icon: ChefHat,
+    highlight: "Customer Favourite",
+    image: "/images/menu/korean-fried-chicken.jpg"
   },
   {
     id: 2,
-    name: "Oki Poke Bowl",
-    description: "Mixed diced fish (yellowtail, tuna, salmon), edamame, wakame, tamago & avocado",
-    price: "£13.80",
-    image: okiBowl,
-    rating: 4.8,
-    reviews: 40,
+    name: "Volcano Tonkotsu Ramen",
+    description: "Rich pork bone broth with noodles, chashu pork, soft-boiled egg, and fiery chili oil",
+    price: "£13.50",
+    icon: Flame,
+    highlight: "Spicy Special",
+    image: "/images/menu/volcano-ramen.jpg"
   },
   {
     id: 3,
-    name: "Grand Slam Poke Bowl",
-    description: "5 different mixed seafood with premium salmon roe topping",
-    price: "£24.50",
-    image: grandSlamBowl,
-    rating: 4.9,
-    reviews: 12,
+    name: "Katsudon",
+    description: "Breaded pork cutlet on rice with egg, onions, and savory sauce",
+    price: "£11.95",
+    icon: Sparkles,
+    highlight: "Classic Comfort",
+    image: "/images/menu/katsudon.jpg"
   },
+  {
+    id: 4,
+    name: "Kimchi Fried Rice",
+    description: "Spicy fermented kimchi with rice, vegetables, and topped with a fried egg",
+    price: "£8.95",
+    icon: Flame,
+    highlight: "Bold & Tangy",
+    image: "/images/menu/kimchi-fried-rice.jpg"
+  }
 ];
 
 export const FeaturedMenu = () => {
   return (
-    <section id="menu" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="font-display text-5xl md:text-6xl font-bold text-foreground mb-4">
-            Signature <span className="text-gradient-primary">Bowls</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Freshly crafted with premium ingredients, served daily
-          </p>
-        </motion.div>
+    <section id="featured-menu" className="py-20 md:py-32 bg-card relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)',
+          backgroundSize: '50px 50px'
+        }} />
+      </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {featuredItems.map((item, index) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
-              <Card className="overflow-hidden group cursor-pointer transition-smooth hover:shadow-medium border-0 shadow-soft">
-                <div className="relative overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="w-full h-64 object-cover transition-smooth group-hover:scale-110"
-                  />
-                  <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full shadow-medium">
-                    <span className="text-accent font-bold text-lg">{item.price}</span>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="flex items-center gap-1">
-                      <span className="text-yellow-500">★</span>
-                      <span className="font-semibold text-foreground">{item.rating}</span>
-                    </div>
-                    <span className="text-muted-foreground text-sm">({item.reviews}+ reviews)</span>
-                  </div>
-                  <h3 className="font-display text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-smooth">
-                    {item.name}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              </Card>
-            </motion.div>
-          ))}
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in-up">
+          <span className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-4">
+            Our Signature Dishes
+          </span>
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <span className="text-foreground">Featured </span>
+            <span className="bg-gradient-to-r from-primary via-primary-light to-accent bg-clip-text text-transparent">
+              Menu
+            </span>
+          </h2>
+          <p className="text-lg md:text-xl text-muted-foreground">
+            Handcrafted with authentic Asian flavours and the freshest ingredients
+          </p>
         </div>
 
-        <motion.div
-          className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
+        {/* Dishes Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {featuredDishes.map((dish, index) => {
+            const Icon = dish.icon;
+            return (
+              <Card 
+                key={dish.id} 
+                className="group bg-background border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow overflow-hidden animate-fade-in-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <CardContent className="p-0">
+                  {/* Image Placeholder */}
+                  <div className="relative h-48 bg-gradient-to-br from-secondary via-muted to-secondary overflow-hidden">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Icon className="w-16 h-16 text-muted-foreground/20" />
+                    </div>
+                    {/* Highlight Badge */}
+                    <div className="absolute top-3 right-3">
+                      <span className="px-3 py-1 rounded-full bg-accent text-accent-foreground text-xs font-bold shadow-medium">
+                        {dish.highlight}
+                      </span>
+                    </div>
+                    {/* Overlay on Hover */}
+                    <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-all duration-300" />
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-5 space-y-3">
+                    <div className="flex items-start justify-between gap-2">
+                      <h3 className="font-display font-bold text-lg text-foreground group-hover:text-primary transition-colors">
+                        {dish.name}
+                      </h3>
+                      <span className="text-primary font-bold text-lg flex-shrink-0">
+                        {dish.price}
+                      </span>
+                    </div>
+                    
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {dish.description}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+
+        {/* CTA Button */}
+        <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
           <Button 
             size="lg"
-            className="bg-primary hover:bg-primary-light text-primary-foreground font-bold rounded-full px-10 py-6 text-lg transition-bounce hover:scale-105 shadow-glow"
+            className="bg-primary hover:bg-primary-light text-primary-foreground shadow-medium hover:shadow-glow transition-all text-lg px-8 py-6"
             asChild
           >
             <Link to="/menu">
-              View Full Menu & Order
+              View Full Menu
             </Link>
           </Button>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
