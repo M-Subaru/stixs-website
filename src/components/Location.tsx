@@ -104,26 +104,20 @@ export const Location = () => {
               </CardContent>
             </Card>
 
-            {/* Map Image */}
+            {/* Interactive Google Map */}
             <Card className="bg-background border-border overflow-hidden animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <div className="relative h-[400px] md:h-full">
-                <img 
-                  src="/images/stixs-map.jpg" 
-                  alt="Map to Stixs Asian Kitchen"
-                  className="w-full h-full object-cover"
+              <div className="relative h-[400px] md:h-full min-h-[500px]">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2290.8877856947545!2d-1.6169!3d54.9733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487e71368ed66d79%3A0xc3ab42175f476a00!2sStixs!5e0!3m2!1sen!2suk!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Stixs Asian Kitchen Location"
+                  className="w-full h-full"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4">
-                  <Button 
-                    className="w-full bg-primary hover:bg-primary-light text-primary-foreground shadow-glow"
-                    asChild
-                  >
-                    <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer">
-                      <Navigation className="mr-2 w-5 h-5" />
-                      Open in Google Maps
-                    </a>
-                  </Button>
-                </div>
               </div>
             </Card>
 

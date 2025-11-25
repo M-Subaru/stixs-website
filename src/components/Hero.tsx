@@ -1,107 +1,102 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, UtensilsCrossed } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Calendar } from "lucide-react";
 
 export const Hero = () => {
+  const reservationUrl = "https://autoreserve.com/en/restaurants/pRaBmwCtq3suDu8UN3kQ";
+
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-card">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(var(--primary)) 1px, transparent 0)',
-          backgroundSize: '40px 40px'
-        }} />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="/images/stixs-hero.jpg" 
+          alt="Stixs Asian Kitchen Newcastle storefront"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
       </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
-          {/* Icon */}
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 border-2 border-primary/20 mb-4">
-            <UtensilsCrossed className="w-10 h-10 text-primary" />
+      {/* Content */}
+      <div className="container mx-auto px-4 relative z-10 text-center animate-fade-in-up">
+        <div className="max-w-4xl mx-auto space-y-8">
+          {/* Tagline */}
+          <div className="inline-block px-6 py-3 rounded-full bg-primary/10 border-2 border-primary/30 backdrop-blur-sm">
+            <span className="text-primary font-bold text-sm md:text-base tracking-wide">
+              Authentic Korean, Japanese & Taiwanese Flavours in Newcastle
+            </span>
           </div>
 
           {/* Main Heading */}
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
-            <span className="block text-foreground mb-2">Authentic</span>
-            <span className="block bg-gradient-to-r from-primary via-primary-light to-accent bg-clip-text text-transparent">
-              Asian Flavours
+            <span className="text-foreground">Stixs </span>
+            <span className="bg-gradient-to-r from-primary via-accent to-primary-light bg-clip-text text-transparent">
+              Asian Kitchen
             </span>
           </h1>
 
-          {/* Subtitle */}
+          {/* Description */}
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Experience the best of Korean, Japanese and Taiwanese cuisine
-            <span className="block mt-2 text-primary font-semibold">in the heart of Newcastle</span>
+            Located in the heart of Newcastle on Newgate Street
           </p>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons - Reservations Featured */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary-light text-primary-foreground shadow-medium hover:shadow-glow transition-all text-lg px-8 py-6 group"
+              size="lg"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-glow hover:shadow-glow-lg transition-all text-lg px-10 py-7 h-auto font-bold"
               asChild
             >
-              <a 
-                href="https://www.ubereats.com/gb/store/stixs-asian-kitchen/S0ln4TDsXO62L7A0dAVCJA" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                Order on Uber Eats
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <a href={reservationUrl} target="_blank" rel="noopener noreferrer">
+                <Calendar className="mr-2 w-6 h-6" />
+                Reserve a Table
               </a>
             </Button>
             
             <Button 
-              size="lg" 
-              variant="outline"
-              className="border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground shadow-soft hover:shadow-medium transition-all text-lg px-8 py-6 group"
+              size="lg"
+              className="bg-primary hover:bg-primary-light text-primary-foreground shadow-medium hover:shadow-glow transition-all text-lg px-8 py-7 h-auto"
               asChild
             >
-              <a 
-                href="https://deliveroo.co.uk/menu/newcastle/newcastle-city-centre/stixs-asian-kitchen" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                Order on Deliveroo
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <a href="https://www.ubereats.com/gb/store/stixs-asian-kitchen/S0ln4TDsXO62L7A0dAVCJA" target="_blank" rel="noopener noreferrer">
+                Order Delivery
               </a>
+            </Button>
+            
+            <Button 
+              size="lg"
+              variant="outline"
+              className="border-2 border-foreground/20 text-foreground hover:bg-foreground/10 shadow-soft hover:shadow-medium transition-all text-lg px-8 py-7 h-auto backdrop-blur-sm"
+              asChild
+            >
+              <a href="#menu">View Menu</a>
             </Button>
           </div>
 
-          {/* Secondary Actions */}
-          <div className="flex flex-wrap gap-6 justify-center pt-4 text-sm text-muted-foreground">
-            <Link to="/menu" className="hover:text-primary transition-colors flex items-center gap-2">
-              <span>View Full Menu</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link to="/allergies" className="hover:text-accent transition-colors flex items-center gap-2">
-              <span>Allergy Information</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-
-          {/* Location Badge */}
-          <div className="pt-8">
-            <p className="text-sm text-muted-foreground">
-              📍 <span className="text-foreground font-semibold">117 Newgate Street, Newcastle upon Tyne</span>
+          {/* Quick Info */}
+          <div className="pt-6 space-y-2">
+            <p className="text-muted-foreground">
+              <a href="tel:+447860363158" className="hover:text-primary transition-colors">
+                📞 +44 7860 363158
+              </a>
+              {" • "}
+              <span>Collection Available</span>
             </p>
+            <a 
+              href="#location" 
+              className="text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-2 group"
+            >
+              <span>117 Newgate Street, Newcastle upon Tyne NE1 5RZ</span>
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
+            </a>
           </div>
         </div>
       </div>
 
-      {/* Bottom Wave */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
-          <path 
-            d="M0 0L60 10C120 20 240 40 360 45C480 50 600 40 720 35C840 30 960 30 1080 35C1200 40 1320 50 1380 55L1440 60V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V0Z" 
-            fill="hsl(var(--card))"
-            fillOpacity="0.3"
-          />
-        </svg>
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+        <div className="w-6 h-10 border-2 border-foreground/30 rounded-full flex items-start justify-center p-2">
+          <div className="w-1 h-3 bg-foreground/30 rounded-full" />
+        </div>
       </div>
     </section>
   );
