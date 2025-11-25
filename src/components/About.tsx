@@ -65,32 +65,38 @@ export const About = () => {
             </div>
           </div>
 
-          {/* Right: Features Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <Card 
-                  key={index}
-                  className="p-6 bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-soft animate-fade-in-up group"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 border-2 border-primary/20 group-hover:border-primary transition-colors">
-                      <Icon className="w-7 h-7 text-primary" />
+          {/* Right: Restaurant Image */}
+          <div className="relative animate-fade-in-up">
+            <div className="relative overflow-hidden rounded-2xl shadow-glow">
+              <img 
+                src="/images/stixs-interior.jpg" 
+                alt="Stixs Asian Kitchen Interior" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+            </div>
+            
+            {/* Features Grid Overlay */}
+            <div className="absolute -bottom-6 -right-6 grid grid-cols-2 gap-4 max-w-sm">
+              {features.slice(0, 2).map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <Card 
+                    key={index}
+                    className="p-4 bg-card/95 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 hover:shadow-soft group"
+                  >
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 border border-primary/20">
+                        <Icon className="w-5 h-5 text-primary" />
+                      </div>
+                      <h3 className="font-display font-bold text-sm text-foreground">
+                        {feature.title}
+                      </h3>
                     </div>
-                    
-                    <h3 className="font-display font-bold text-xl text-foreground group-hover:text-primary transition-colors">
-                      {feature.title}
-                    </h3>
-                    
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </div>
-                </Card>
-              );
-            })}
+                  </Card>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

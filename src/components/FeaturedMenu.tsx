@@ -8,34 +8,34 @@ const featuredDishes = [
     id: 1,
     name: "Korean Fried Chicken",
     description: "Crispy, golden chicken with your choice of sauce: Sweet Chili, Soy Garlic, or Spicy Yangnyeom",
-    price: "£9.95",
+    price: "£12.00",
     icon: ChefHat,
     highlight: "Customer Favourite",
-    image: "/images/menu/korean-fried-chicken.jpg"
+    image: "/images/menu/korean-fried-chicken-5piece.jpg"
   },
   {
     id: 2,
     name: "Volcano Tonkotsu Ramen",
     description: "Rich pork bone broth with noodles, chashu pork, soft-boiled egg, and fiery chili oil",
-    price: "£13.50",
+    price: "£13.00",
     icon: Flame,
     highlight: "Spicy Special",
-    image: "/images/menu/volcano-ramen.jpg"
+    image: "/images/menu/volcano-tonkotsu-ramen-broth.jpg"
   },
   {
     id: 3,
-    name: "Katsudon",
+    name: "Katsudon with Tonkotsu",
     description: "Breaded pork cutlet on rice with egg, onions, and savory sauce",
-    price: "£11.95",
+    price: "£12.50",
     icon: Sparkles,
     highlight: "Classic Comfort",
-    image: "/images/menu/katsudon.jpg"
+    image: "/images/menu/katsudon-with-tonkotsu.jpg"
   },
   {
     id: 4,
     name: "Kimchi Fried Rice",
     description: "Spicy fermented kimchi with rice, vegetables, and topped with a fried egg",
-    price: "£8.95",
+    price: "£10.80",
     icon: Flame,
     highlight: "Bold & Tangy",
     image: "/images/menu/kimchi-fried-rice.jpg"
@@ -81,11 +81,13 @@ export const FeaturedMenu = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardContent className="p-0">
-                  {/* Image Placeholder */}
-                  <div className="relative h-48 bg-gradient-to-br from-secondary via-muted to-secondary overflow-hidden">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <Icon className="w-16 h-16 text-muted-foreground/20" />
-                    </div>
+                  {/* Image */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={dish.image} 
+                      alt={dish.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                     {/* Highlight Badge */}
                     <div className="absolute top-3 right-3">
                       <span className="px-3 py-1 rounded-full bg-accent text-accent-foreground text-xs font-bold shadow-medium">
