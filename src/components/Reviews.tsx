@@ -10,9 +10,9 @@ const reviews = [
     text: "This Korean-Japanese restaurant is such a great deal! The portions are huge, the flavors are delicious, and you definitely leave feeling full and satisfied. Totally worth a visit if you're hungry and love tasty food!",
     subtitle: "119 reviews",
     images: [
-      "/images/reviews/localguide-review-image1.jpg",
-      "/images/reviews/localguide-review-image2.jpg",
-      "/images/reviews/localguide-review-image3.jpg"
+      `${import.meta.env.BASE_URL}images/reviews/localguide-review-image1.jpg`,
+      `${import.meta.env.BASE_URL}images/reviews/localguide-review-image2.jpg`,
+      `${import.meta.env.BASE_URL}images/reviews/localguide-review-image3.jpg`
     ]
   },
   {
@@ -21,7 +21,7 @@ const reviews = [
     rating: 5,
     text: "ABSOLUTELY AMAZING ASIAN FOOD! My friend and I had the Tteokbokki (no cheese), 3 Piece Fried chicken, Kimchi, Teriyaki Chicken Donburi, and Slow Braised Pork Donburi. The portions are big and well worth the price.",
     subtitle: "12 reviews",
-    images: ["/images/reviews/carys-review-image.jpg"]
+    images: [`${import.meta.env.BASE_URL}images/reviews/carys-review-image.jpg`]
   },
   {
     id: 3,
@@ -30,8 +30,8 @@ const reviews = [
     text: "Really nice restaurant. The portions are large and very tasty. Their kimchi is delicious and the staff is very friendly. Highly recommend!",
     subtitle: "3 reviews",
     images: [
-      "/images/reviews/alejandra-review-image1.jpg",
-      "/images/reviews/alejandra-review-image2.jpg"
+      `${import.meta.env.BASE_URL}images/reviews/alejandra-review-image1.jpg`,
+      `${import.meta.env.BASE_URL}images/reviews/alejandra-review-image2.jpg`
     ]
   }
 ];

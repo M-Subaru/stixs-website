@@ -46,7 +46,7 @@ export const Navbar = () => {
           >
             <div className="flex items-center justify-center w-20 h-20 overflow-hidden">
               <img 
-                src="/images/stixs-logo.png" 
+                src={`${import.meta.env.BASE_URL}images/stixs-logo.png`}
                 alt="Stixs Asian Kitchen Logo" 
                 className="w-full h-full object-contain"
               />
