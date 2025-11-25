@@ -75,10 +75,10 @@ export const Reviews = () => {
           {reviews.map((review, index) => (
             <Card 
               key={review.id} 
-              className="bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow animate-fade-in-up"
+              className="bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow animate-fade-in-up flex flex-col"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CardContent className="p-6 space-y-4">
+              <CardContent className="p-6 space-y-4 flex flex-col h-full">
                 {/* Rating */}
                 <div className="flex gap-1">
                   {[...Array(review.rating)].map((_, i) => (
@@ -87,7 +87,7 @@ export const Reviews = () => {
                 </div>
 
                 {/* Review Text */}
-                <p className="text-muted-foreground leading-relaxed italic">
+                <p className="text-muted-foreground leading-relaxed italic flex-grow">
                   "{review.text}"
                 </p>
 
@@ -99,9 +99,9 @@ export const Reviews = () => {
 
                 {/* Review Images */}
                 {review.images.length > 0 && (
-                  <div className={`grid gap-2 ${review.images.length > 1 ? 'grid-cols-2' : ''}`}>
+                  <div className="grid grid-cols-2 gap-2">
                     {review.images.map((image, idx) => (
-                      <div key={idx} className="relative h-32 rounded-lg overflow-hidden">
+                      <div key={idx} className="relative aspect-square rounded-lg overflow-hidden">
                         <img 
                           src={image} 
                           alt={`Review by ${review.name}`}

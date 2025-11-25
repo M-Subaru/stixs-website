@@ -77,7 +77,7 @@ export const About = () => {
             </div>
             
             {/* Features Grid Overlay */}
-            <div className="absolute -bottom-6 -right-6 grid grid-cols-2 gap-4 max-w-sm">
+            <div className="absolute bottom-6 right-6 grid grid-cols-2 gap-4 max-w-sm">
               {features.slice(0, 2).map((feature, index) => {
                 const Icon = feature.icon;
                 return (
