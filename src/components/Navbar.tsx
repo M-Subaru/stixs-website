@@ -44,8 +44,12 @@ export const Navbar = () => {
             to="/" 
             className="flex items-center gap-3 group"
           >
-            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 border-2 border-primary/30 group-hover:border-primary transition-all">
-              <UtensilsCrossed className="w-6 h-6 text-primary" />
+            <div className="flex items-center justify-center w-12 h-12 overflow-hidden">
+              <img 
+                src="/images/stixs-logo.png" 
+                alt="Stixs Asian Kitchen Logo" 
+                className="w-full h-full object-contain"
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-display text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">

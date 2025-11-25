@@ -66,14 +66,21 @@ export const Hero = () => {
               size="lg"
               variant="outline"
               className="border-2 border-foreground/20 text-foreground hover:bg-foreground/10 shadow-soft hover:shadow-medium transition-all text-lg px-8 py-7 h-auto backdrop-blur-sm"
-              asChild
+              onClick={() => {
+                const menuSection = document.getElementById('menu');
+                if (menuSection) {
+                  menuSection.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  window.location.href = '/menu';
+                }
+              }}
             >
-              <a href="#menu">View Menu</a>
+              View Menu
             </Button>
           </div>
 
           {/* Quick Info */}
-          <div className="pt-6 space-y-2">
+          <div className="pt-6 space-y-2 mb-16">
             <p className="text-muted-foreground">
               <a href="tel:+447860363158" className="hover:text-primary transition-colors">
                 📞 +44 7860 363158
@@ -93,7 +100,7 @@ export const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
         <div className="w-6 h-10 border-2 border-foreground/30 rounded-full flex items-start justify-center p-2">
           <div className="w-1 h-3 bg-foreground/30 rounded-full" />
         </div>

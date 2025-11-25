@@ -9,11 +9,11 @@ const menuSections = [
   {
     title: "Korean Fried Chicken 地道韓式炸雞",
     items: [
-      { name: "Chicken wings 5 pieces 韓式雞翼 5隻", description: "Crispy fried wings with Korean glaze choice", price: "£7.80", popular: true },
-      { name: "Chicken wings 7 pieces 韓式雞翼 7隻", description: "Larger portion – same great glaze choice", price: "£9.50", popular: true },
+      { name: "Chicken wings 5 pieces 韓式雞翼 5隻", description: "Crispy fried wings with Korean glaze choice", price: "£7.80", popular: true, image: "/images/menu/korean-fried-chicken-wings-5piece.jpg" },
+      { name: "Chicken wings 7 pieces 韓式雞翼 7隻", description: "Larger portion – same great glaze choice", price: "£9.50", popular: true, image: "/images/menu/korean-fried-chicken-wings-7piece.jpg" },
       { name: "Chicken wings 16 pieces 韓式雞翼 16隻", description: "Party size wings", price: "£20.80" },
       { name: "Chicken pieces 3 韓式雞塊 3塊", description: "Boneless bites – Popular", price: "£8.50" },
-      { name: "Chicken pieces 5 韓式雞塊 5塊", description: "Boneless bites – bigger portion", price: "£12.00", popular: true },
+      { name: "Chicken pieces 5 韓式雞塊 5塊", description: "Boneless bites – bigger portion", price: "£12.00", popular: true, image: "/images/menu/korean-fried-chicken-5piece.jpg" },
       { name: "Chicken pieces 10 韓式雞塊 10塊", description: "Party size boneless bites", price: "£23.00" },
     ]
   },
@@ -32,7 +32,7 @@ const menuSections = [
     title: "Small Plate 前菜",
     items: [
       { name: "Tteokbokki 韓式辣炒年糕", description: "Spicy stir-fried rice cake with cabbage & fish cake", price: "£8.00", spicy: true, popular: true },
-      { name: "Takoyaki 日本章魚燒", description: "Octopus balls with aonori, tafuku sauce & mayo", price: "£7.80" },
+      { name: "Takoyaki 日本章魚燒", description: "Octopus balls with aonori, tafuku sauce & mayo", price: "£7.80", image: "/images/menu/takoyaki-plate.jpg" },
       { name: "Prawn Toast with Salted Duck Egg 金沙咸蛋蝦多士", description: "Golden prawn toast tossed in salted egg crumble", price: "£9.50" },
       { name: "Korean Com Cheese 韓式烤芝士粟米", description: "Mozzarella on sweetcorn, gochujang, spring onion", price: "£8.50" },
       { name: "Chicken & Cheese Spring Roll (3) 雞柳芝士春卷", description: "Crispy rolls filled with chicken & mozzarella", price: "£7.50" },
@@ -43,14 +43,14 @@ const menuSections = [
     title: "Taiwanese Noodle / Rice 台式麵飯",
     items: [
       { name: "Braised Mixed Spice Pork Belly Rice 台灣滷肉飯", description: "Lu-rou: slow-braised pork belly on rice with pickled radish", price: "£11.80", popular: true },
-      { name: "Taiwanese Beef Noodle Soup 台灣牛肉麵", description: "Tender beef, handmade noodles, bok choy, pickled mustard in rich broth", price: "£14.00" },
+      { name: "Taiwanese Beef Noodle Soup 台灣牛肉麵", description: "Tender beef, handmade noodles, bok choy, pickled mustard in rich broth", price: "£14.00", image: "/images/menu/taiwanese-beef-broth.jpg" },
     ]
   },
   {
     title: "Korean Rice / Noodles & Meat 韓式炒飯,拌飯, 肉類",
     items: [
-      { name: "Galbi with Kimchi Rice Bowl 韓式烤牛小排泡菜飯", description: "Grilled beef short ribs on kimchi fried rice, sesame, spring onion", price: "£14.00", spicy: true, popular: true },
-      { name: "Kimchi Fried Rice with Fried Egg 韓式泡菜炒飯", description: "Spicy kimchi rice topped with sunny-side-up egg", price: "£10.80", spicy: true, popular: true },
+      { name: "Galbi with Kimchi Rice Bowl 韓式烤牛小排泡菜飯", description: "Grilled beef short ribs on kimchi fried rice, sesame, spring onion", price: "£14.00", spicy: true, popular: true, image: "/images/menu/galbi-kimchi-rice-bowl.jpg" },
+      { name: "Kimchi Fried Rice with Fried Egg 韓式泡菜炒飯", description: "Spicy kimchi rice topped with sunny-side-up egg", price: "£10.80", spicy: true, popular: true, image: "/images/menu/kimchi-fried-rice.jpg" },
       { name: "Kimchi Fried Rice with Bacon & Fried Egg 韓式泡菜豬肉炒飯", description: "House kimchi, bacon lardons, fried egg", price: "£11.80", spicy: true },
       { name: "Kimchi Jjigae 韓式辣泡菜燉五花腩", description: "Kimchi stew with belly pork & tofu, served with rice", price: "£13.50", spicy: true },
       { name: "Japchae 韓式蔬菜拌冬粉", description: "Glass noodles stir-fried with mixed vegetables & sesame", price: "£10.90" },
@@ -69,8 +69,8 @@ const menuSections = [
   {
     title: "Ramen 拉麵",
     items: [
-      { name: "Tonkotsu Ramen Broth 日式豬骨湯拉麵", description: "BBQ pork belly on top of ramen in a rich 18-hour pork broth topped with ajitsuke tamago, kikurage, mushrooms, spring onions, sesame and nori seaweed", price: "£12.50", popular: true },
-      { name: "Volcano Tonkotsu Ramen Broth 火焰日式豬骨湯拉麵", description: "BBQ pork belly on top of ramen in super-spicy pork broth topped with ajitsuke tamago, kikurage, mushrooms, spring onions, sesame and nori seaweed", price: "£13.00", spicy: true, popular: true },
+      { name: "Tonkotsu Ramen Broth 日式豬骨湯拉麵", description: "BBQ pork belly on top of ramen in a rich 18-hour pork broth topped with ajitsuke tamago, kikurage, mushrooms, spring onions, sesame and nori seaweed", price: "£12.50", popular: true, image: "/images/menu/tonkotsu-ramen-broth.jpg" },
+      { name: "Volcano Tonkotsu Ramen Broth 火焰日式豬骨湯拉麵", description: "BBQ pork belly on top of ramen in super-spicy pork broth topped with ajitsuke tamago, kikurage, mushrooms, spring onions, sesame and nori seaweed", price: "£13.00", spicy: true, popular: true, image: "/images/menu/volcano-tonkotsu-ramen-broth.jpg" },
       { name: "Shoyu Soy Ramen Broth 日式醬油拉麵", description: "Chicken karaage on top of ramen in chicken broth topped with ajitsuke tamago, kikurage, mushrooms, spring onions, sesame and nori seaweed", price: "£12.50" },
       { name: "Miso Soybean Ramen Broth with Marinated Grilled Miso Salmon 日式味噌拉麵配烤味噌三文魚扒", description: "Miso marinated salmon on top of ramen in chicken broth topped with ajitsuke tamago, kikurage, mushrooms, spring onions, sesame and nori seaweed", price: "£15.50" },
       { name: "Vegan Miso Ramen Topped with Bean Curd 蔬菜味噌拉麵配豆腐", description: "Bean curd topped with kikurage, mushrooms, spring onions, sesame and nori seaweed", price: "£12.50" },
@@ -85,7 +85,7 @@ const menuSections = [
       { name: "Katsudon with Katsu Chicken 日式洋蔥滑蛋吉列雞扒飯", description: "Panko chicken, onions & egg simmered in sweet-savoury sauce on rice", price: "£12.50" },
       { name: "Teriyaki Chicken Rice Bowl 日式照燒雞扒飯", description: "Grilled teriyaki chicken thigh, steamed rice, sesame, spring onion", price: "£11.80", popular: true },
       { name: "Slow-braised Belly Pork 日式叉燒飯", description: "House chashu slices, rice, pickles, spring onion", price: "£11.80" },
-      { name: "Katsudon with Tonkotsu (Pork) 日式洋蔥滑蛋吉列豬扒飯", description: "Panko pork cutlet, onions & egg simmered in sweet-savoury sauce on rice", price: "£12.50", popular: true },
+      { name: "Katsudon with Tonkotsu (Pork) 日式洋蔥滑蛋吉列豬扒飯", description: "Panko pork cutlet, onions & egg simmered in sweet-savoury sauce on rice", price: "£12.50", popular: true, image: "/images/menu/katsudon-with-tonkotsu.jpg" },
       { name: "Tonkatsu 日式吉列豬扒飯", description: "Panko pork loin, cabbage slaw, tonkatsu fruit sauce, rice", price: "£11.80" },
       { name: "Katsu Pork Loin Curry 日式咖喱吉列豬扒飯", description: "Deep-fried panko pork, Japanese curry sauce, rice", price: "£12.50" },
     ]
@@ -194,8 +194,23 @@ const Menu = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.3, delay: itemIndex * 0.05 }}
                   >
-                    <Card className="h-full bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-soft group">
-                      <div className="p-6 h-full flex flex-direction-column">
+                    <Card className="h-full bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-soft group overflow-hidden">
+                      {/* Image or Placeholder */}
+                      {item.image ? (
+                        <div className="relative w-full h-48 overflow-hidden">
+                          <img
+                            src={item.image}
+                            alt={item.name}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                        </div>
+                      ) : (
+                        <div className="relative w-full h-48 bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center">
+                          <span className="text-muted-foreground/50 text-sm">Image coming soon</span>
+                        </div>
+                      )}
+                      
+                      <div className="p-6">
                         <div className="flex items-start justify-between gap-2 mb-3">
                           <h3 className="font-display font-bold text-lg text-foreground group-hover:text-primary transition-colors leading-tight">
                             {item.name}
