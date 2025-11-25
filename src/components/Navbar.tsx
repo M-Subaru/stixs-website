@@ -44,7 +44,7 @@ export const Navbar = () => {
             to="/" 
             className="flex items-center gap-3 group"
           >
-            <div className="flex items-center justify-center w-12 h-12 overflow-hidden">
+            <div className="flex items-center justify-center w-20 h-20 overflow-hidden">
               <img 
                 src="/images/stixs-logo.png" 
                 alt="Stixs Asian Kitchen Logo" 
