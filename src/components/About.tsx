@@ -49,19 +49,18 @@ export const About = () => {
 
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
-                At <span className="text-primary font-semibold">Stixs Asian Kitchen</span>, we're passionate about delivering 
-                the bold, authentic flavours of Asia right to your doorstep. From crispy Korean fried chicken 
-                to hearty volcano ramen, every dish is crafted with care and tradition.
+                Located in the heart of Newcastle on <span className="text-foreground font-semibold">117 Newgate Street</span>, 
+                Stixs brings you an exciting fusion of <span className="text-primary font-semibold">authentic Korean, Japanese and Taiwanese flavours</span>. 
+                Our open-kitchen restaurant specialises in Korean fried chicken, 18-hour tonkotsu broth and street-food favourites.
               </p>
               
               <p>
-                Located in the heart of Newcastle on <span className="text-foreground font-semibold">St Andrew's Street</span>, 
-                we pride ourselves on using fresh, quality ingredients and authentic cooking techniques 
-                to create meals that transport you straight to the streets of Seoul, Tokyo, and beyond.
+                From crispy wings to volcano tonkotsu ramen and galbi kimchi rice bowls, every dish is 
+                crafted with passion and fresh ingredients. Experience authentic Asian flavours in the heart of Newcastle.
               </p>
 
               <p className="text-primary font-semibold">
-                Order now on Uber Eats or Deliveroo and taste the difference!
+                Book a table, call for collection, or order delivery today!
               </p>
             </div>
           </div>
