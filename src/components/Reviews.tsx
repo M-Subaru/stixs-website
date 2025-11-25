@@ -87,7 +87,7 @@ export const Reviews = () => {
                 </div>
 
                 {/* Review Text */}
-                <p className="text-muted-foreground leading-relaxed italic flex-grow">
+                <p className="text-muted-foreground leading-relaxed italic min-h-[120px]">
                   "{review.text}"
                 </p>
 
